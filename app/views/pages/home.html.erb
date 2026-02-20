@@ -1,239 +1,343 @@
-<section class="hero">
-  <div class="hero__inner container">
-    <div class="hero__badge">Intelligence Artificielle · On-Premise · Sur Mesure</div>
+<body>
+  <nav class="nav" id="nav">
+    <div class="nav-i z">
+      <a href="#" class="nav-logo">YTIA</a>
+      <ul class="nav-lks">
+        <li><a href="#entreprise"   class="nav-lk">Entreprise</a></li>
+        <li><a href="#expertise"    class="nav-lk">Expertise</a></li>
+        <li><a href="#methodologie" class="nav-lk">Méthode</a></li>
+        <li><a href="#secteurs"     class="nav-lk">Secteurs</a></li>
+        <li><a href="#contact"      class="nav-lk">Contact</a></li>
+      </ul>
+      <div class="nav-r">
+        <a href="#contact" class="btn btn-dk" style="padding:9px 22px;font-size:.78rem">Démarrer un projet</a>
+        <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobile">
+      <ul>
+        <li><a href="#entreprise">Entreprise</a></li>
+        <li><a href="#expertise">Expertise</a></li>
+        <li><a href="#methodologie">Méthode</a></li>
+        <li><a href="#secteurs">Secteurs</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="#contact" class="btn btn-dk" style="width:100%;justify-content:center">Démarrer un projet</a>
+    </div>
+  </nav>
 
-    <h1 class="hero__title">
-      Vos processus,<br>
-      <span class="hero__title--accent">transformés par lIA.</span>
-    </h1>
 
-    <p class="hero__sub">
-      YTIA déploie des agents IA, automatise vos métiers et construit vos
-      plateformes logicielles — en local, souverain, sans dépendance cloud.
-    </p>
+  <!-- ═══ HERO — parallax ═════════════════════════════════════ -->
+  <section class="hero" id="hero">
 
-    <div class="hero__actions">
-      <%= link_to "Démarrer un projet", "#contact", class: "btn btn--primary" %>
-      <%= link_to "Voir l'approche", "#approche", class: "btn btn--ghost" %>
+    <!-- Parallax layers (vitesses différentes, toutes controlées par JS) -->
+    <div class="p-layer p-grid"   id="pg"   aria-hidden="true"></div>
+    <div class="p-layer p-dots"   id="pd"   aria-hidden="true"></div>
+    <div class="p-layer p-blob-a" id="pb1"  aria-hidden="true"></div>
+    <div class="p-layer p-blob-b" id="pb2"  aria-hidden="true"></div>
+    <div class="p-layer p-blob-c" id="pb3"  aria-hidden="true"></div>
+    <div class="p-layer p-diag"   id="pdi"  aria-hidden="true"></div>
+
+    <!-- Grand déco typographique qui dérive -->
+    <div class="p-deco" id="pdeco" aria-hidden="true">IA</div>
+
+    <div class="z hero-body">
+      <p class="hero-eye">IA · Cloud · Infrastructure distribuée · Souveraineté numérique</p>
+      <h1 class="disp hero-h1">
+        Systèmes<br>intelligents,<br><em>souverains</em><br>et durables.
+      </h1>
+      <p class="lg hero-sub">
+        Nous concevons et déployons des plateformes logicielles avancées intégrant
+        intelligence artificielle, cloud et infrastructure distribuée — pour les
+        organisations qui veulent reprendre le contrôle de leurs données et de leurs systèmes.
+      </p>
+      <div class="ctas hero-ctas">
+        <a href="#contact"      class="btn btn-dk">Démarrer un projet</a>
+        <a href="#expertise"    class="btn btn-ol">Notre expertise</a>
+        <a href="#methodologie" class="btn btn-ln">Notre approche →</a>
+      </div>
+    </div>
+
+    <div class="hero-scroll" aria-hidden="true">
+      <div class="hero-scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+
+  </section>
+
+
+  <!-- ═══ MISSION BAND ════════════════════════════════════════ -->
+  <div class="band">
+    <div class="z">
+      <p class="band-txt" data-r>
+        <span class="band-lbl">Mission —</span>
+        Accélérer la transformation numérique en construisant des systèmes
+        intelligents, souverains et durables.
+      </p>
     </div>
   </div>
 
-  <div class="hero__grid" aria-hidden="true"></div>
-  <div class="hero__glow" aria-hidden="true"></div>
-</section>
 
-
-<section class="services" id="services">
-  <div class="container">
-    <div class="section-label">Expertise</div>
-
-    <div class="services__grid">
-
-      <article class="service-card" data-reveal>
-        <div class="service-card__icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+  <!-- ═══ PRÉSENTATION ════════════════════════════════════════ -->
+  <section class="s" id="entreprise">
+    <div class="z">
+      <div class="intro-grid">
+        <div data-r>
+          <span class="lbl">Notre entreprise</span>
+          <h2 class="sh sh-l">À la croisée de l'ingénierie,<br>du cloud et de l'<em>IA.</em></h2>
+          <p class="lg" style="margin-bottom:20px">
+            Spécialisés dans la conception et le développement de solutions logicielles
+            avancées, nous aidons les organisations publiques et privées à automatiser
+            leurs processus, exploiter leurs données et construire des systèmes numériques
+            robustes, évolutifs et souverains.
+          </p>
+          <p class="md">
+            Nous combinons expertise full-stack, DevOps, machine learning et architecture
+            cloud native pour proposer des plateformes modernes, sécurisées et adaptées
+            aux enjeux actuels.
+          </p>
         </div>
-        <h3 class="service-card__title">IA & Agents Intelligents</h3>
-        <p class="service-card__desc">
-          LLM open-source fine-tunés sur vos données, agents métiers autonomes,
-          pipelines RAG, automatisation documentaire. Déployé en on-premise —
-          vos données ne quittent pas votre infrastructure.
-        </p>
-        <ul class="service-card__list">
-          <li>LLaMA · Mistral · Phi fine-tunés</li>
-          <li>Agents IA sur workflows réels</li>
-          <li>RAG sur base documentaire</li>
-          <li>On-premise · Air-gapped</li>
-        </ul>
-      </article>
-
-      <article class="service-card" data-reveal>
-        <div class="service-card__icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-        </div>
-        <h3 class="service-card__title">Architecture & Développement</h3>
-        <p class="service-card__desc">
-          Applications Rails 8 natif, API robustes, modernisation de systèmes
-          legacy, architectures scalables et intégrations multi-systèmes.
-          Code livré propre, testé, documenté.
-        </p>
-        <ul class="service-card__list">
-          <li>Ruby on Rails 8 · Hotwire natif</li>
-          <li>API REST / GraphQL</li>
-          <li>Migration legacy · Microservices</li>
-          <li>CI/CD · Tests · DevOps</li>
-        </ul>
-      </article>
-
-      <article class="service-card" data-reveal>
-        <div class="service-card__icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-        </div>
-        <h3 class="service-card__title">Transformation & Automatisation</h3>
-        <p class="service-card__desc">
-          Automatisation des processus métiers répétitifs, orchestration de
-          workflows, tableaux de bord décisionnels et accompagnement des
-          équipes dans la durée.
-        </p>
-        <ul class="service-card__list">
-          <li>RPA · Automatisation métier</li>
-          <li>Orchestration · Monitoring</li>
-          <li>Dashboards analytiques</li>
-          <li>Accompagnement long terme</li>
-        </ul>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-
-
-<section class="approche" id="approche">
-  <div class="container">
-    <div class="section-label">Méthode</div>
-    <h2 class="section-title">Simple. Rigoureux. Livré.</h2>
-
-    <div class="steps">
-      <div class="step" data-reveal>
-        <div class="step__num">01</div>
-        <div class="step__body">
-          <h4>Cadrage & Analyse</h4>
-          <p>On part de vos vrais enjeux : processus, contraintes, données existantes.
-          Pas de template générique — un diagnostic honnête en 1 à 2 semaines.</p>
-        </div>
-      </div>
-      <div class="step__connector" aria-hidden="true"></div>
-      <div class="step" data-reveal>
-        <div class="step__num">02</div>
-        <div class="step__body">
-          <h4>Conception & Développement</h4>
-          <p>Architecture propre, sprints courts, démos régulières. Le code est propre, testé et versionné.</p>
-        </div>
-      </div>
-      <div class="step__connector" aria-hidden="true"></div>
-      <div class="step" data-reveal>
-        <div class="step__num">03</div>
-        <div class="step__body">
-          <h4>Déploiement & Autonomie</h4>
-          <p>Mise en production maîtrisée, documentation complète, transfert de
-          compétences. Vous êtes autonomes — ou accompagnés si vous le souhaitez.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-<section class="secteurs" id="secteurs">
-  <div class="container">
-    <div class="secteurs__inner">
-
-      <div class="secteurs__left" data-reveal>
-        <div class="section-label">Secteurs & Marchés Publics</div>
-        <h2 class="section-title">Public · Privé ·<br>Secteurs sensibles.</h2>
-        <p class="secteurs__text">
-          YTIA intervient auprès des collectivités, administrations, PME industrielles
-          et ETI. Structure capable de répondre aux marchés publics numériques :
-          MAPA, accords-cadres, documentation technique complète, conformité RGPD.
-        </p>
-        <div class="secteurs__badges">
-          <span class="badge">Collectivités</span>
-          <span class="badge">Santé</span>
-          <span class="badge">Industrie</span>
-          <span class="badge">Finance</span>
-          <span class="badge">Agriculture</span>
-          <span class="badge">Éducation</span>
-        </div>
-      </div>
-
-      <div class="secteurs__right" data-reveal>
-        <div class="marches-card">
-          <div class="marches-card__header">Marchés Publics</div>
-          <ul class="marches-list">
-            <li>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,6 9,17 4,12"/></svg>
-              Réponse aux appels doffres ouverts & MAPA
-            </li>
-            <li>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,6 9,17 4,12"/></svg>
-              Mémoire technique structuré
-            </li>
-            <li>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,6 9,17 4,12"/></svg>
-              Conformité RGPD · NIS2
-            </li>
-            <li>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,6 9,17 4,12"/></svg>
-              Documentation & gouvernance complètes
-            </li>
-            <li>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,6 9,17 4,12"/></svg>
-              Hébergement France · Données souveraines
-            </li>
-          </ul>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-<section class="contact" id="contact">
-  <div class="container">
-    <div class="contact__inner">
-      <div class="contact__left" data-reveal>
-        <div class="section-label">Contact</div>
-        <h2 class="section-title">Un projet en tête ?<br>Parlons-en.</h2>
-        <p class="contact__sub">
-          Premier échange confidentiel, sans engagement.
-          Réponse sous 24h ouvrées.
-        </p>
-        <div class="contact__meta">
-          <div class="contact__meta-item">
-            <span class="contact__meta-key">Email</span>
-            <a href="mailto:contact@ytia.fr" class="contact__meta-val">contact@ytia.fr</a>
+        <div data-r data-d="1">
+          <div class="pillars">
+            <div class="pillar"><span class="pn">01</span><div><h4>Ingénierie logicielle</h4><p>Full-stack, API, architectures distribuées</p></div></div>
+            <div class="pillar"><span class="pn">02</span><div><h4>Architecture cloud & Kubernetes</h4><p>Cloud native, multi-cloud, IaC</p></div></div>
+            <div class="pillar"><span class="pn">03</span><div><h4>Orchestration IA</h4><p>Multi-providers LLM, MLOps, RAG, pipelines</p></div></div>
+            <div class="pillar"><span class="pn">04</span><div><h4>Automatisation & analyse</h4><p>Processus métiers, documentaire, décisionnel</p></div></div>
           </div>
-          <div class="contact__meta-item">
-            <span class="contact__meta-key">Format</span>
-            <span class="contact__meta-val">Visio ou présentiel</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ VISION ══════════════════════════════════════════════ -->
+  <section class="s s-g" id="vision">
+    <div class="z">
+      <span class="lbl" data-r>Vision</span>
+      <h2 class="sh" data-r>Des systèmes pensés pour <em>durer et évoluer.</em></h2>
+      <div class="vgrid">
+        <div class="vc" data-r><span class="vc-num">1</span><div class="vc-bar"></div><h3>Autonomes</h3><p>Opèrent sans intervention constante, avec résilience et auto-correction automatiques.</p></div>
+        <div class="vc" data-r data-d="1"><span class="vc-num">2</span><div class="vc-bar"></div><h3>Scalables par conception</h3><p>Architectures extensibles horizontalement, prêtes pour la croissance sans refonte.</p></div>
+        <div class="vc" data-r data-d="2"><span class="vc-num">3</span><div class="vc-bar"></div><h3>Résilients</h3><p>Haute disponibilité, tolérance aux pannes, continuité de service assurée.</p></div>
+        <div class="vc" data-r><span class="vc-num">4</span><div class="vc-bar"></div><h3>Sécurisés</h3><p>Zero-trust, chiffrement, conformité RGPD & NIS2 — intégrés dès la conception.</p></div>
+        <div class="vc" data-r data-d="1"><span class="vc-num">5</span><div class="vc-bar"></div><h3>Interopérables</h3><p>API-first, standards ouverts, intégration native avec les SI existants.</p></div>
+        <div class="vc" data-r data-d="2"><span class="vc-num">6</span><div class="vc-bar"></div><h3>Multi-cloud & multi-vendor</h3><p>Indépendance totale — AWS, GCP, Azure, on-premise ou infrastructure privée souveraine.</p></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ EXPERTISE ════════════════════════════════════════════ -->
+  <section class="s" id="expertise">
+    <div class="z">
+      <span class="lbl" data-r>Expertise principale</span>
+      <h2 class="sh" data-r>Ce que nous <em>construisons.</em></h2>
+
+      <!-- 01 -->
+      <div class="xb xb-rev" data-r>
+        <div class="xt">
+          <div class="xt-num" aria-hidden="true">01</div>
+          <span class="xt-tag">Plateformes IA</span>
+          <h3>IA multi-providers</h3>
+          <p>Nous concevons des architectures orchestrant plusieurs fournisseurs de modèles — LLM, spécialisés, open source ou propriétaires. Ces systèmes garantissent portabilité, résilience et optimisation des coûts tout en préservant la souveraineté technologique.</p>
+          <div class="tags"><span>Portabilité</span><span>Résilience</span><span>Coût optimisé</span><span>Souveraineté</span><span>Évolutivité</span></div>
+        </div>
+        <div class="xv xv-blue" data-xv>
+          <div class="hub">
+            <div class="hub-c">Orchestrateur YTIA</div>
+            <div class="hub-g">
+              <div class="hub-n">Mistral AI</div>
+              <div class="hub-n">OpenAI GPT</div>
+              <div class="hub-n">LLaMA 3</div>
+              <div class="hub-n">Custom</div>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="contact__form-wrap" data-reveal>
-        <%= form_with url: "#", method: :post, class: "contact-form" do |f| %>
-          <div class="field">
-            <%= f.label :name, "Nom & Organisation" %>
-            <%= f.text_field :name, placeholder: "Jean Dupont · Mairie de Lyon" %>
+      <!-- 02 -->
+      <div class="xb" data-r>
+        <div class="xt">
+          <div class="xt-num" aria-hidden="true">02</div>
+          <span class="xt-tag">MLOps & Cloud</span>
+          <h3>Orchestration et MLOps</h3>
+          <p>Plateformes gérant l'ensemble du cycle de vie des modèles : déploiement, monitoring, évaluation, versioning, isolation des workloads et optimisation des ressources. Conception cloud native et Kubernetes.</p>
+          <div class="tags"><span>Déploiement</span><span>Monitoring</span><span>Évaluation</span><span>Versioning</span><span>Kubernetes</span></div>
+        </div>
+        <div class="xv xv-indigo" data-xv>
+          <div class="cyc">
+            <div class="crow"><div class="cn">Train</div><div class="ca">→</div><div class="cn">Evaluate</div><div class="ca">→</div><div class="cn">Deploy</div></div>
+            <div class="crow" style="opacity:.65"><div class="cn">Monitor</div><div class="ca">←</div><div class="cn">Serve</div><div class="ca">←</div><div class="cn">Version</div></div>
           </div>
-          <div class="field">
-            <%= f.label :email, "Email professionnel" %>
-            <%= f.email_field :email, placeholder: "j.dupont@organisation.fr" %>
+        </div>
+      </div>
+
+      <!-- 03 -->
+      <div class="xb xb-rev" data-r>
+        <div class="xt">
+          <div class="xt-num" aria-hidden="true">03</div>
+          <span class="xt-tag">Analyse documentaire</span>
+          <h3>Automatisation documentaire et analyse intelligente</h3>
+          <p>Systèmes analysant automatiquement des documents complexes — DCE, appels d'offres, cahiers des charges, contrats. Extraction, conformité, aide à la décision, recherche intelligente et synthèse automatisée.</p>
+          <div class="tags"><span>DCE & AO</span><span>Extraction</span><span>Conformité</span><span>Recherche sémantique</span><span>Synthèse</span></div>
+        </div>
+        <div class="xv xv-teal" data-xv>
+          <div class="docf">
+            <div class="dcol"><div class="df">DCE.pdf</div><div class="df">Contrat.docx</div><div class="df">CdC.pdf</div></div>
+            <div class="da">→</div>
+            <div class="dcol"><div class="do">Extraction</div><div class="do">Conformité</div><div class="do">Décision</div></div>
           </div>
-          <div class="field">
-            <%= f.label :message, "Votre projet" %>
-            <%= f.text_area :message, rows: 4, placeholder: "Décrivez brièvement votre besoin…" %>
+        </div>
+      </div>
+
+      <!-- 04 -->
+      <div class="xb" data-r>
+        <div class="xt">
+          <div class="xt-num" aria-hidden="true">04</div>
+          <span class="xt-tag">Software</span>
+          <h3>Logiciels métier sur mesure</h3>
+          <p>De la conception produit jusqu'à la mise en production — SaaS, applications métiers, plateformes collaboratives, outils de pilotage, interfaces décisionnelles. Stack complète maîtrisée en interne.</p>
+          <div class="tags"><span>SaaS</span><span>Apps métiers</span><span>Collaboratif</span><span>Pilotage</span><span>Décisionnel</span></div>
+        </div>
+        <div class="xv xv-slate" data-xv>
+          <div class="sbs">
+            <div class="sb"><span class="sb-l">UI / UX</span><div class="sb-t"><div class="sb-f"></div></div></div>
+            <div class="sb"><span class="sb-l">API</span><div class="sb-t"><div class="sb-f"></div></div></div>
+            <div class="sb"><span class="sb-l">Backend</span><div class="sb-t"><div class="sb-f"></div></div></div>
+            <div class="sb"><span class="sb-l">Infra</span><div class="sb-t"><div class="sb-f"></div></div></div>
           </div>
-          <%= f.submit "Envoyer →", class: "btn btn--primary btn--full" %>
-        <% end %>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
+  <!-- ═══ MÉTHODOLOGIE ════════════════════════════════════════ -->
+  <section class="s s-g" id="methodologie">
+    <div class="z">
+      <span class="lbl" data-r>Méthodologie</span>
+      <h2 class="sh" data-r>Architecture first. <em>Delivery always.</em></h2>
+      <div class="mgrid">
+        <div class="mc" data-r><span class="mc-n">01</span><h4>Architecture first</h4><p>Vision architecturale claire avant la première ligne de code — chaque décision est justifiée et documentée.</p></div>
+        <div class="mc" data-r data-d="1"><span class="mc-n">02</span><h4>Infrastructure as code</h4><p>Terraform, Kubernetes, Helm — chaque composant infra est versionné, auditable et reproductible.</p></div>
+        <div class="mc" data-r data-d="2"><span class="mc-n">03</span><h4>Sécurité by design</h4><p>Zero-trust, chiffrement, RBAC — la sécurité est intégrée dès la conception, jamais après.</p></div>
+        <div class="mc" data-r><span class="mc-n">04</span><h4>Observabilité & fiabilité</h4><p>Logs structurés, traces distribuées, métriques — visibilité complète sur chaque composant.</p></div>
+        <div class="mc" data-r data-d="1"><span class="mc-n">05</span><h4>Design produit</h4><p>Interfaces pensées pour l'utilisateur final — UX, accessibilité et performance perçue.</p></div>
+        <div class="mc" data-r data-d="2"><span class="mc-n">06</span><h4>Déploiement continu</h4><p>CI/CD robuste, tests automatisés, rollback instantané — delivery rapide sans compromis.</p></div>
+      </div>
+    </div>
+  </section>
 
-<footer class="footer">
-  <div class="container footer__inner">
-    <div class="footer__brand">YTIA</div>
-    <div class="footer__copy">© <%= Time.current.year %> YTIA · Intelligence Artificielle sur Mesure</div>
-    <nav class="footer__links" aria-label="Footer">
-      <%= link_to "Mentions légales", "#" %>
-      <%= link_to "Confidentialité", "#" %>
-    </nav>
-  </div>
-</footer>
 
+  <!-- ═══ SECTEURS ════════════════════════════════════════════ -->
+  <section class="s" id="secteurs">
+    <div class="z">
+      <span class="lbl" data-r>Clients & secteurs</span>
+      <h2 class="sh" data-r>Public · Privé · <em>Sensibles.</em></h2>
+      <div class="sgrid">
+        <div class="sc" data-r><div class="sc-b"></div><h4>Entreprises technologiques</h4><p>Scale-ups, éditeurs logiciels, plateformes SaaS</p></div>
+        <div class="sc" data-r data-d="1"><div class="sc-b"></div><h4>PME & ETI</h4><p>Transformation numérique, modernisation SI</p></div>
+        <div class="sc" data-r data-d="2"><div class="sc-b"></div><h4>Secteur public</h4><p>Administrations, ministères, opérateurs d État</p></div>
+        <div class="sc" data-r data-d="3"><div class="sc-b"></div><h4>Collectivités</h4><p>Régions, métropoles, communes, EPCI</p></div>
+        <div class="sc" data-r><div class="sc-b"></div><h4>Industrie</h4><p>Manufacturing, maintenance prédictive, IoT</p></div>
+        <div class="sc" data-r data-d="1"><div class="sc-b"></div><h4>Défense & souveraineté</h4><p>Systèmes sécurisés, air-gapped, conformité</p></div>
+        <div class="sc" data-r data-d="2"><div class="sc-b"></div><h4>Conseil & services</h4><p>ESN, cabinets, opérateurs marchés publics</p></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ DIFFÉRENCIATEURS ════════════════════════════════════ -->
+  <section class="s s-g" id="differenciateurs">
+    <div class="z">
+      <span class="lbl" data-r>Pourquoi nous</span>
+      <h2 class="sh" data-r>Ce qui nous <em>différencie.</em></h2>
+      <div class="dgrid">
+        <div class="di" data-r><div class="di-n">01</div><div><h4>Vision plateforme, pas simple intégration</h4><p>Systèmes complets et cohérents — pas des assemblages d'outils tiers sans vision globale.</p></div></div>
+        <div class="di" data-r data-d="1"><div class="di-n">02</div><div><h4>Expertise combinée IA + cloud + software</h4><p>Une équipe couvrant l'ensemble de la stack — de l'algorithme à l'infrastructure.</p></div></div>
+        <div class="di" data-r><div class="di-n">03</div><div><h4>Indépendance vis-à-vis des fournisseurs</h4><p>Architectures vendor-agnostic, open source first, portabilité garantie.</p></div></div>
+        <div class="di" data-r data-d="1"><div class="di-n">04</div><div><h4>Forte capacité de prototypage et delivery</h4><p>De l'idée à la mise en production en semaines, avec des métriques mesurables.</p></div></div>
+        <div class="di" data-r><div class="di-n">05</div><div><h4>Culture produit et ingénierie</h4><p>Code propre, tests, documentation — nous construisons pour le long terme.</p></div></div>
+        <div class="di" data-r data-d="1"><div class="di-n">06</div><div><h4>Autonomie complète sur la stack</h4><p>Aucune dépendance non maîtrisée — chaque brique est comprise et contrôlée.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ CONTACT ══════════════════════════════════════════════ -->
+  <section class="s" id="contact">
+    <div class="z">
+      <div class="cgrid">
+        <div data-r>
+          <span class="lbl">Contact</span>
+          <h2 class="sh sh-l">Démarrons<br><em>votre projet.</em></h2>
+          <p class="lg" style="margin-bottom:32px">Système à construire, processus à automatiser ou infrastructure à moderniser — échangeons sans engagement.</p>
+          <div class="ctas">
+            <a href="mailto:contact@ytia.fr" class="btn btn-dk">contact@ytia.fr</a>
+            <span style="font-family:var(--mono);font-size:.68rem;color:var(--t3)">Réponse sous 24h</span>
+          </div>
+        </div>
+        <div data-r data-d="1">
+          <div class="cform">
+            <div class="field"><label>Nom & Organisation</label><input type="text" placeholder="Jean Dupont · Mairie de Lyon"></div>
+            <div class="field"><label>Email professionnel</label><input type="email" placeholder="j.dupont@organisation.fr"></div>
+            <div class="field">
+              <label>Type de projet</label>
+              <select>
+                <option value="">Sélectionner…</option>
+                <option>Plateforme IA multi-providers</option>
+                <option>MLOps & infrastructure cloud</option>
+                <option>Analyse documentaire intelligente</option>
+                <option>Logiciel métier sur mesure</option>
+                <option>Conseil & architecture</option>
+              </select>
+            </div>
+            <div class="field"><label>Votre projet</label><textarea placeholder="Décrivez brièvement votre besoin…"></textarea></div>
+            <button class="fsub">Envoyer le message →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ FOOTER ═══════════════════════════════════════════════ -->
+  <footer class="ft">
+    <div class="z">
+      <div class="ftg">
+        <div>
+          <a href="#" class="ft-logo">YTIA</a>
+          <p class="ft-tag">IA · Cloud · Infrastructure souveraine</p>
+          <p class="ft-desc">Plateformes logicielles avancées pour les organisations publiques et privées. IA multi-providers, MLOps, analyse documentaire, logiciels métier.</p>
+        </div>
+        <div class="ft-col"><h4>Expertise</h4><ul>
+          <li><a href="#expertise">Plateformes IA</a></li>
+          <li><a href="#expertise">MLOps & Orchestration</a></li>
+          <li><a href="#expertise">Analyse documentaire</a></li>
+          <li><a href="#expertise">Logiciels métier</a></li>
+        </ul></div>
+        <div class="ft-col"><h4>Entreprise</h4><ul>
+          <li><a href="#vision">Vision</a></li>
+          <li><a href="#methodologie">Méthode</a></li>
+          <li><a href="#secteurs">Secteurs</a></li>
+          <li><a href="#differenciateurs">Différenciateurs</a></li>
+        </ul></div>
+        <div class="ft-col"><h4>Contact</h4><ul>
+          <li><a href="#contact">Démarrer un projet</a></li>
+          <li><a href="mailto:contact@ytia.fr">contact@ytia.fr</a></li>
+        </ul></div>
+      </div>
+      <div class="ft-bot">
+        <p class="ft-copy">© 2025 YTIA — Tous droits réservés</p>
+        <nav class="ft-leg">
+          <a href="#">Mentions légales</a>
+          <a href="#">Politique cookies</a>
+          <a href="#">Données personnelles</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+</body>
