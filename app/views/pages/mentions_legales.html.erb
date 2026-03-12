@@ -1,0 +1,55 @@
+<% content_for :title, "Mentions légales | YTIA" %>
+<% content_for :description, "Mentions légales de YTIA — éditeur, hébergeur, propriété intellectuelle et responsabilité." %>
+<% content_for :robots, "noindex,nofollow" %>
+
+<div class="legal-page">
+  <%= render "pages/home/nav" %>
+
+  <main class="legal-body z">
+    <div class="legal-wrap">
+      <a href="<%= root_path %>" class="legal-back">← Retour</a>
+      <h1>Mentions légales</h1>
+      <p class="legal-updated">Dernière mise à jour : <%= Date.today.strftime("%-d %B %Y") %></p>
+
+      <section>
+        <h2>1. Éditeur du site</h2>
+        <p><strong>YTIA</strong><br>
+        Société par actions simplifiée (SAS)<br>
+        France<br>
+        Email : <a href="mailto:contact@ytia.fr">contact@ytia.fr</a></p>
+      </section>
+
+      <section>
+        <h2>2. Directeur de la publication</h2>
+        <p>Le directeur de la publication est le représentant légal de YTIA.</p>
+      </section>
+
+      <section>
+        <h2>3. Hébergement</h2>
+        <p>Ce site est hébergé sur une infrastructure cloud souveraine française (OVHcloud / Scaleway), dont les serveurs sont localisés en France.</p>
+      </section>
+
+      <section>
+        <h2>4. Propriété intellectuelle</h2>
+        <p>L'ensemble du contenu de ce site (textes, visuels, architecture, code) est la propriété exclusive de YTIA ou de ses partenaires. Toute reproduction, représentation ou diffusion, même partielle, sans autorisation écrite préalable de YTIA est strictement interdite.</p>
+      </section>
+
+      <section>
+        <h2>5. Limitation de responsabilité</h2>
+        <p>YTIA s'efforce de maintenir les informations publiées à jour mais ne saurait être tenu responsable des erreurs ou omissions. Les liens hypertextes vers des sites tiers n'engagent pas la responsabilité de YTIA.</p>
+      </section>
+
+      <section>
+        <h2>6. Données personnelles</h2>
+        <p>Les traitements de données personnelles effectués via ce site sont décrits dans notre <a href="<%= confidentialite_path %>">Politique de confidentialité</a>.</p>
+      </section>
+
+      <section>
+        <h2>7. Droit applicable</h2>
+        <p>Le présent site est soumis au droit français. Tout litige relatif à son utilisation relève de la compétence exclusive des tribunaux français.</p>
+      </section>
+    </div>
+  </main>
+
+  <%= render "pages/home/footer" %>
+</div>

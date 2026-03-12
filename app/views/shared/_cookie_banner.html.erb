@@ -1,0 +1,16 @@
+<%# Bandeau cookie RGPD — fonctionnel uniquement (thème), pas de traçage tiers %>
+<%# Script déplacé vers app/javascript/cookie_banner.js %>
+<div id="cookie-banner" class="cookie-banner" role="dialog" aria-live="polite" aria-label="Consentement cookies" style="display:none">
+  <div class="cookie-inner">
+    <div class="cookie-text">
+      <strong>Cookies</strong>
+      Ce site utilise uniquement un cookie fonctionnel pour mémoriser votre préférence de thème.
+      Aucun cookie publicitaire ni traceur tiers.
+      <a href="<%= confidentialite_path %>#cookies">En savoir plus</a>
+    </div>
+    <div class="cookie-actions">
+      <button type="button" class="cookie-btn cookie-accept" id="cookieAccept">Accepter</button>
+      <button type="button" class="cookie-btn cookie-refuse" id="cookieRefuse">Refuser</button>
+    </div>
+  </div>
+</div>

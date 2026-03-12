@@ -1,0 +1,15 @@
+<div class="feat-block <%= 'rev' if feature[:reverse] %>" data-r>
+  <div class="feat-text">
+    <span class="feat-num"><%= feature[:num] %></span>
+    <h3><%= feature[:title] %></h3>
+    <p><%= feature[:description] %></p>
+    <div class="feat-chips">
+      <% feature[:chips].each do |chip| %>
+        <span class="feat-chip"><%= chip %></span>
+      <% end %>
+    </div>
+  </div>
+  <div class="feat-img">
+    <img src="<%= feature[:image] %>" alt="<%= feature[:alt] %>" loading="lazy" width="800" height="530">
+  </div>
+</div>

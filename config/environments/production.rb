@@ -24,11 +24,11 @@ Rails.application.configure do
   # Store uploaded files on the local file system (see config/storage.yml for options).
   config.active_storage.service = :local
 
-  # Assume all access to the app is happening through a SSL-terminating reverse proxy.
-  # config.assume_ssl = true
+  # Heroku termine SSL en amont — on suppose que toutes les requêtes arrivent via HTTPS.
+  config.assume_ssl = true
 
-  # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
-  # config.force_ssl = true
+  # Force HTTPS + HSTS header.
+  config.force_ssl = true
 
   # Skip http-to-https redirect for the default health check endpoint.
   # config.ssl_options = { redirect: { exclude: ->(request) { request.path == "/up" } } }
@@ -57,8 +57,8 @@ Rails.application.configure do
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
 
-  # Set host to be used by links generated in mailer templates.
-  config.action_mailer.default_url_options = { host: "example.com" }
+  # Host pour les URL générées (mailer, sitemap). Définir APP_HOST sur Heroku.
+  config.action_mailer.default_url_options = { host: ENV.fetch("APP_HOST", "ytia.fr"), protocol: "https" }
 
   # Specify outgoing SMTP server. Remember to add smtp/* credentials via bin/rails credentials:edit.
   # config.action_mailer.smtp_settings = {
@@ -79,12 +79,13 @@ Rails.application.configure do
   # Only use :id for inspections in production.
   config.active_record.attributes_for_inspect = [ :id ]
 
-  # Enable DNS rebinding protection and other `Host` header attacks.
-  # config.hosts = [
-  #   "example.com",     # Allow requests from example.com
-  #   /.*\.example\.com/ # Allow requests from subdomains like `www.example.com`
-  # ]
-  #
-  # Skip DNS rebinding protection for the default health check endpoint.
-  # config.host_authorization = { exclude: ->(request) { request.path == "/up" } }
+  # Autoriser le domaine configuré + les sous-domaines Heroku.
+  # Définir APP_HOST sur Heroku (ex: mon-app.herokuapp.com ou domaine custom).
+  allowed_host = ENV.fetch("APP_HOST", "ytia.fr")
+  config.hosts = [
+    allowed_host,
+    /\A.*\.#{Regexp.escape(allowed_host)}\z/,
+    /\A.*\.herokuapp\.com\z/
+  ]
+  config.host_authorization = { exclude: ->(request) { request.path == "/up" } }
 end

@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
 
   root "pages#home"
+  post "contact" => "pages#contact", as: :contact
+  get "mentions-legales"   => "pages#mentions_legales",   as: :mentions_legales
+  get "confidentialite"    => "pages#confidentialite",    as: :confidentialite
+  get "sitemap.xml"        => "pages#sitemap",            as: :sitemap, format: :xml
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.

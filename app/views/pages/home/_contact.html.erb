@@ -1,0 +1,90 @@
+<!-- ══ CONTACT ════════════════════════════════════════════════ -->
+<section class="contact" id="contact">
+  <div class="contact-orb" aria-hidden="true"></div>
+  <div class="z">
+    <div class="contact-grid">
+      <div data-r>
+        <div class="eyebrow">Contact</div>
+        <h2>Parlons de votre <span class="grad">contexte</span></h2>
+        <p>Marché public, POC IA, refonte d'infrastructure ou question de faisabilité — nous répondons sous 24 h ouvrées avec un avis technique honnête.</p>
+        <% if flash[:notice].present? %>
+          <div class="form-flash form-flash-ok"><%= flash[:notice] %></div>
+        <% end %>
+        <% if flash[:alert].present? %>
+          <div class="form-flash form-flash-err"><%= flash[:alert] %></div>
+        <% end %>
+        <a href="mailto:contact@ytia.fr" class="contact-email">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="3"/><polyline points="2,4 12,13 22,4"/></svg>
+          contact@ytia.fr
+        </a>
+        <div class="trust-grid">
+          <div class="trust-item">
+            <span class="trust-k">SLA</span>
+            <span class="trust-v">Réponse sous 24h ouvrées</span>
+          </div>
+          <div class="trust-item">
+            <span class="trust-k">Hébergement</span>
+            <span class="trust-v">France · Cloud souverain</span>
+          </div>
+          <div class="trust-item">
+            <span class="trust-k">Conformité</span>
+            <span class="trust-v">RGPD et traçabilité des traitements</span>
+          </div>
+        </div>
+      </div>
+      <%= form_with url: contact_path, method: :post, scope: :contact, local: true, class: "cform", data: { r: true, d: 1 } do |f| %>
+        <% if @contact_errors.present? %>
+          <div class="form-errors">
+            <p>Merci de corriger les points suivants:</p>
+            <ul>
+              <% @contact_errors.each do |error| %>
+                <li><%= error %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+
+        <div class="hp-field" aria-hidden="true">
+          <%= f.label :website, "Ne pas remplir" %>
+          <%= f.text_field :website, tabindex: "-1", autocomplete: "off" %>
+        </div>
+
+        <div class="field">
+          <%= f.label :name, "Votre nom" %>
+          <%= f.text_field :name, placeholder: "Jean Dupont", value: @contact_form[:name] %>
+        </div>
+        <div class="field">
+          <%= f.label :email, "Email professionnel" %>
+          <%= f.email_field :email, placeholder: "j.dupont@organisation.fr", value: @contact_form[:email] %>
+        </div>
+        <div class="field">
+          <%= f.label :project_type, "Type de projet" %>
+          <%= f.select :project_type, options_for_select([
+            ["Sélectionner...", ""],
+            ["Automatisation de workflows", "Automatisation de workflows"],
+            ["Intégration LLM / RAG", "Intégration LLM / RAG"],
+            ["Plateforme métier sur mesure", "Plateforme métier sur mesure"],
+            ["Infrastructure cloud souverain", "Infrastructure cloud souverain"],
+            ["Réponse à appel d'offres public", "Réponse à appel d'offres public"],
+            ["Autre", "Autre"]
+          ], @contact_form[:project_type]) %>
+        </div>
+        <div class="field">
+          <%= f.label :message, "Votre besoin" %>
+          <%= f.text_area :message, placeholder: "Contexte, objectifs, contraintes techniques ou calendaires...", value: @contact_form[:message] %>
+        </div>
+        <div class="field field-consent">
+          <label class="consent-label">
+            <%= f.check_box :rgpd_consent, { checked: @contact_form[:rgpd_consent] == "1" }, "1", "0" %>
+            <span>
+              J'accepte que mes données soient traitées par YTIA dans le cadre de ma demande, conformément à notre
+              <a href="<%= confidentialite_path %>" target="_blank" rel="noopener">politique de confidentialité</a>.
+              Ces données ne seront jamais cédées à des tiers.
+            </span>
+          </label>
+        </div>
+        <%= f.submit "Envoyer la demande →", class: "fsub" %>
+      <% end %>
+    </div>
+  </div>
+</section>
