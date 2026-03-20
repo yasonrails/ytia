@@ -3,41 +3,75 @@
   <div class="z">
     <div class="showcase-hd" data-r>
       <div class="eyebrow">Réalisations</div>
-      <h2 class="sh">Ce que nous avons <span class="grad">mis en production</span></h2>
-      <p class="sd">Trois missions conduites en environnement réel, avec des objectifs mesurables et des systèmes aujourd'hui exploités en production.</p>
+      <h2 class="sh">Systèmes <span class="grad">déployés en production</span></h2>
+      <p class="sd">Missions conduites en environnement réel, avec des objectifs contractuels mesurables et des systèmes opérés en production.</p>
     </div>
 
-    <div class="showcase-grid">
-      <% cards = [
-        {
-          image: "https://images.unsplash.com/photo-1568667256549-094345857637?w=1000&q=80&fit=crop",
-          alt: "Portail appels d'offres IA",
-          category: "Secteur public · LLM / RAG",
-          name: "Portail intelligent de gestion des appels d'offres publics",
-          kpi: "-42% de temps de qualification dossier",
-          delay: nil
-        },
-        {
-          image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=700&q=80&fit=crop",
-          alt: "Robot et maintenance prédictive IoT",
-          category: "Industrie · MLOps",
-          name: "Orchestrateur de maintenance prédictive IoT multi-sites",
-          kpi: "+31% de disponibilité machine sur 6 mois",
-          delay: 1
-        },
-        {
-          image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=700&q=80&fit=crop",
-          alt: "IA générative analyse contractuelle",
-          category: "Juridique · IA générative",
-          name: "Chaîne d'analyse contractuelle avec synthèses et scoring de clauses",
-          kpi: "95% de conformité de pré-contrôle documentaire",
-          delay: 2
-        }
-      ] %>
+    <% cards = [
+      {
+        image: "https://images.unsplash.com/photo-1568667256549-094345857637?w=1000&q=80&fit=crop",
+        alt: "Tableau de bord citoyen multi-domaine",
+        category: "Territoires · Data publique",
+        name: "Dashboard citoyen multi-domaine (sante, transport, energie, risques)",
+        kpi: "Unification de 12 sources de donnees en temps reel"
+      },
+      {
+        image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=700&q=80&fit=crop",
+        alt: "Analyse risques et opportunites metier",
+        category: "Entreprise · Decision Intelligence",
+        name: "Analyse des risques et opportunites metier avec priorisation automatique",
+        kpi: "-36% sur le temps de qualification des risques"
+      },
+      {
+        image: "https://images.unsplash.com/photo-1460472178825-e5240623afd5?w=900&q=80&fit=crop",
+        alt: "Tableau de bord territorial multi-agences",
+        category: "Secteur public · Gouvernance",
+        name: "Tableau de bord territorial multi-agences avec indicateurs consolides",
+        kpi: "Pilotage inter-services avec reporting unifie"
+      },
+      {
+        image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=900&q=80&fit=crop",
+        alt: "Synthese citoyenne et systeme d'alertes",
+        category: "Services publics · IA generative",
+        name: "Synthese citoyenne complete avec alertes personnalisees sur donnees publiques",
+        kpi: "Traitement multi-criteres en moins de 4 secondes"
+      },
+      {
+        image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=900&q=80&fit=crop",
+        alt: "Prediction recoltes et alertes agricoles",
+        category: "Agritech · Prediction",
+        name: "Prediction de recoltes et systeme d'alertes agricoles par zone",
+        kpi: "+18% de precision sur les previsions saisonnieres"
+      },
+      {
+        image: "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?w=900&q=80&fit=crop",
+        alt: "Ingenierie pedagogique automatisee",
+        category: "Formation · Automatisation",
+        name: "Generation automatisee d'ingenierie pedagogique complete a partir d'un brief",
+        kpi: "Conception reduite de 2 jours a moins de 3 minutes"
+      },
+      {
+        image: "https://images.unsplash.com/photo-1521790797524-b2497295b8a0?w=900&q=80&fit=crop",
+        alt: "Industrialisation reponses appels d'offres",
+        category: "Formation professionnelle · Operations",
+        name: "Industrialisation des reponses pedagogiques sur appels d'offres",
+        kpi: "Capacite de production multipliee par 5"
+      },
+      {
+        image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=700&q=80&fit=crop",
+        alt: "Pre-controle documentaire et scoring",
+        category: "Juridique · Conformite",
+        name: "Chaine d'analyse contractuelle avec synthese et scoring de clauses",
+        kpi: "95% de conformite au pre-controle documentaire"
+      }
+    ] %>
 
-      <% cards.each do |card| %>
-        <%= render "pages/home/showcase_card", card: card %>
-      <% end %>
+    <div class="showcase-carousel" data-r>
+      <div class="showcase-track">
+        <% (cards + cards).each do |card| %>
+          <%= render "pages/home/showcase_card", card: card %>
+        <% end %>
+      </div>
     </div>
   </div>
 </section>

@@ -4,13 +4,14 @@
   <div class="cookie-inner">
     <div class="cookie-text">
       <strong>Cookies</strong>
-      Ce site utilise uniquement un cookie fonctionnel pour mémoriser votre préférence de thème.
-      Aucun cookie publicitaire ni traceur tiers.
-      <a href="<%= confidentialite_path %>#cookies">En savoir plus</a>
+      Ce site utilise uniquement des traceurs fonctionnels nécessaires au confort de navigation
+      (préférence de thème). Aucun cookie publicitaire ni traceur analytique tiers n'est déposé
+      sans consentement.
+      <a href="<%= confidentialite_path(anchor: "cookies") %>">En savoir plus</a>
     </div>
     <div class="cookie-actions">
-      <button type="button" class="cookie-btn cookie-accept" id="cookieAccept">Accepter</button>
-      <button type="button" class="cookie-btn cookie-refuse" id="cookieRefuse">Refuser</button>
+      <button type="button" class="cookie-btn cookie-accept" id="cookieAccept" aria-label="Accepter les cookies fonctionnels">Accepter</button>
+      <button type="button" class="cookie-btn cookie-refuse" id="cookieRefuse" aria-label="Refuser les cookies non essentiels">Refuser</button>
     </div>
   </div>
 </div>

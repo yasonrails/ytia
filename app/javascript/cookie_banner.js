@@ -1,12 +1,14 @@
 (function() {
+  var CONSENT_KEY = 'ytia_cookie_consent';
   var banner = document.getElementById('cookie-banner');
   if(!banner) return;
-  var consent = localStorage.getItem('ytia_cookie_consent');
+  var consent = localStorage.getItem(CONSENT_KEY);
   if(!consent){ banner.style.display = 'flex'; }
 
   function dismiss(val){
-    localStorage.setItem('ytia_cookie_consent', val);
+    localStorage.setItem(CONSENT_KEY, val);
     banner.style.display = 'none';
+    window.dispatchEvent(new CustomEvent('ytia:cookie-consent', { detail: { value: val } }));
   }
 
   var btnAccept = document.getElementById('cookieAccept');

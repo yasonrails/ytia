@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
+    <meta charset="utf-8">
     <title><%= seo_title %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="description" content="<%= seo_description %>">
     <meta name="author" content="YTIA">
+    <meta name="theme-color" content="#0b0f1a">
+    <meta name="format-detection" content="telephone=no">
     <meta name="robots" content="<%= content_for?(:robots) ? yield(:robots) : "index,follow" %>">
     <link rel="canonical" href="<%= canonical_url %>">
+    <link rel="alternate" hreflang="fr-FR" href="<%= canonical_url %>">
 
     <%# Open Graph %>
     <meta property="og:type" content="website">
@@ -16,6 +20,9 @@
     <meta property="og:description" content="<%= seo_description %>">
     <meta property="og:url" content="<%= canonical_url %>">
     <meta property="og:image" content="<%= seo_og_image %>">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="YTIA — Intelligence artificielle souveraine">
 
     <%# Twitter Card %>
@@ -49,6 +56,17 @@
         "Ruby on Rails",
         "MLOps"
       ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "YTIA",
+      "url": "https://ytia.fr",
+      "inLanguage": "fr-FR",
+      "description": "Ingénierie IA souveraine pour environnements critiques"
     }
     </script>
 

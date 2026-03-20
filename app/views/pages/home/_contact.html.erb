@@ -5,8 +5,8 @@
     <div class="contact-grid">
       <div data-r>
         <div class="eyebrow">Contact</div>
-        <h2>Parlons de votre <span class="grad">contexte</span></h2>
-        <p>Marché public, POC IA, refonte d'infrastructure ou question de faisabilité — nous répondons sous 24 h ouvrées avec un avis technique honnête.</p>
+        <h2>Présentez votre <span class="grad">contexte opérationnel</span></h2>
+        <p>Marché public, expérimentation IA, refonte d'infrastructure ou étude de faisabilité : YTIA formule une réponse technique structurée sous 24 h ouvrées.</p>
         <% if flash[:notice].present? %>
           <div class="form-flash form-flash-ok"><%= flash[:notice] %></div>
         <% end %>
@@ -21,10 +21,10 @@
 
           <div class="trust-item">
             <span class="trust-k">Hébergement</span>
-            <span class="trust-v">France · Cloud souverain</span>
+            <span class="trust-v">France · Hébergement souverain</span>
           </div>
           <div class="trust-item">
-            <span class="trust-k">Conformité</span>
+            <span class="trust-k">Conformité réglementaire</span>
             <span class="trust-v">RGPD et traçabilité des traitements</span>
           </div>
         </div>
@@ -61,7 +61,7 @@
             ["Automatisation de workflows", "Automatisation de workflows"],
             ["Intégration LLM / RAG", "Intégration LLM / RAG"],
             ["Plateforme métier sur mesure", "Plateforme métier sur mesure"],
-            ["Infrastructure cloud souverain", "Infrastructure cloud souverain"],
+            ["Infrastructure cloud souveraine", "Infrastructure cloud souveraine"],
             ["Réponse à appel d'offres public", "Réponse à appel d'offres public"],
             ["Autre", "Autre"]
           ], @contact_form[:project_type]) %>
@@ -74,7 +74,7 @@
           <label class="consent-label">
             <%= f.check_box :rgpd_consent, { checked: @contact_form[:rgpd_consent] == "1" }, "1", "0" %>
             <span>
-              J'accepte que mes données soient traitées par YTIA dans le cadre de ma demande, conformément à notre
+              J'accepte que mes données soient traitées par YTIA dans le cadre de ma demande, conformément à la
               <a href="<%= confidentialite_path %>" target="_blank" rel="noopener">politique de confidentialité</a>.
               Ces données ne seront jamais cédées à des tiers.
             </span>
