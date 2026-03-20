@@ -433,15 +433,15 @@ nav, section, .marquee, footer { position:relative; z-index:2; }
 .showcase-carousel {
   position:relative;
   overflow:hidden;
-  mask-image:linear-gradient(to right, transparent 0, #000 4%, #000 96%, transparent 100%);
-  -webkit-mask-image:linear-gradient(to right, transparent 0, #000 4%, #000 96%, transparent 100%);
+  mask-image:linear-gradient(to right, transparent 0, #000 2%, #000 98%, transparent 100%);
+  -webkit-mask-image:linear-gradient(to right, transparent 0, #000 2%, #000 98%, transparent 100%);
 }
 
 .showcase-track {
   display:flex;
   gap:10px;
   width:max-content;
-  animation:showcaseSlide 52s linear infinite;
+  animation:showcaseSlide 68s linear infinite;
   will-change:transform;
 }
 
@@ -1019,7 +1019,7 @@ nav, section, .marquee, footer { position:relative; z-index:2; }
 @media (max-width:620px) {
   .hero-title   { font-size:clamp(2.4rem,11vw,3.6rem); }
   .hero-proof { margin-bottom:34px; }
-  .showcase-track { animation-duration:42s; }
+  .showcase-track { animation-duration:56s; }
   .showcase-track .sg { flex-basis:84vw; min-height:220px; }
   .stats-row    { grid-template-columns:1fr; }
   .methode-grid { grid-template-columns:1fr; }
