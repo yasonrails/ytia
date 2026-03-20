@@ -20,7 +20,10 @@ test:
   <<: *default
   database: storage/test.sqlite3
 
-# Production — SQLite (la même qu'en dev)
+# Production — PostgreSQL (Heroku fournit DATABASE_URL automatiquement)
 production:
   <<: *default
-  database: storage/production.sqlite3
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  url: <%= ENV["DATABASE_URL"] %>
